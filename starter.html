@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Geometric Dungeon</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap');
+    </style>
+</head>
+<body>
+    <!-- Titre du jeu -->
+    <h1 id="Titre_jeu" style="margin-top: 2vw;">Choix de votre Pouvoir !</h1>
+    <!-- Bar de séparation -->
+    <div class="separation" style="width: 20vw; margin-left: 40vw;"></div>
+    <!-- Pouvoirs -->
+    <div class="conteneur" style="width: 100vw; padding-left: 0;">
+
+        <!-- Pouvoir des Bombes -->
+        <div style="width: 30vw;">
+            <img class="pouvoir" src="img/bombe.png" style="height: 10vh; width: auto;" alt="Image de Bombes">
+            <h3>Bombes</h3> 
+            <!-- Bar de séparation -->
+            <div class="separation" style="width: 7vw;"></div>
+            <div class="contenue">
+                Possédez la capacité de <b>poser des bombes</b><br><br>
+                Posez des bombes détruisant <b>tous les ennemis</b> aux alentours après quelques secondes !<br><br>
+                Faites un <b>clic gauche</b> avec votre souris pour poser une bombe !<br><br>            
+            </div>
+            <!-- Bouton de Lancement -->
+            <div class="bouton">
+                <button type="button" id="play bombes">Start</button>
+            </div>
+        </div>
+
+        <!-- Pouvoir de l'Halo -->
+        <div style="width: 30vw;">
+            <img class="pouvoir" src="img/halo.png" style="height: 10vh; width: auto;" alt="Image de l'halo">
+            <h3>Halo</h3>
+            <!-- Bar de séparation -->
+            <div class="separation" style="width: 7vw;"></div>
+            <div class="contenue">
+                Un Halo apparaît <b>autour du joueur</b><br><br>
+                Faites en sorte que l'Halo soit en contact avec les ennemis pendant <b>un bref moment</b> pour éliminer les ennemis !<br><br>
+                <b>Déplacez</b> le curseur pour bouger l'Halo !<br><br>
+            </div>
+            <!-- Bouton de Lancement -->
+            <div class="bouton">
+                <button type="button" id="play halo">Start</button>
+            </div>
+        </div>
+
+        <!-- Pouvoir des Porjectiles -->
+        <div style="width: 30vw;">     
+            <img class="pouvoir" src="img/projectiles.png" style="height: 7vh; width: auto; margin-bottom: 3vh;" alt="Image de Balles">
+            <h3>Balles</h3>
+            <!-- Bar de séparation -->
+            <div class="separation" style="width: 7vw;"></div>
+            <div class="contenue">
+                <b>Tirez en continu</b> de nombreuses balles<br><br>
+                Chaque balle peut éliminer un ennemi basique <b></b>en un seul coup</b> !<br><br>
+                Utilisez <b>les touches Z, Q, S et D</b> du clavier pour choisir la direction de vos tirs !<br><br>
+            </div>
+            <!-- Bouton de Lancement -->
+            <div class="bouton">
+                <button type="button" id="play balles">Start</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script_choix.js"></script>
+</body>
+</html>

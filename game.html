@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Geometric Dungeon</title>
+    <script src="https://unpkg.com/konva@9/konva.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap');
+    </style>
+</head>
+<body id="body">
+
+<!-- ---------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------- -->
+    <!-- Ecran de jeu -->
+    <div id="ultra_container">
+        <div id="container"></div>
+    </div>
+    
+<!-- ---------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------- -->
+    <!-- Ecran de pause -->
+    <div id="pause">
+        <!-- Score -->
+        <h1 id="pause_text"></h1>
+        <!-- Option -->
+        <div class="bouton">
+            <button type="button"style="border: 0px;" id="option_bouton"><img id="pause_option" src="img/option.png" style="width:100px; height:100px;"></button>
+        </div>
+        <img src="./img/pause.png" alt="pause" id="pause_img">
+    </div>
+
+<!-- ---------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------- -->
+    <!-- Ecran d'option -->
+    <div id="option">
+        <div class="header_option">    
+            <!-- Titre du jeu -->
+            <h1 id="Titre_jeu" style="margin-top: 5vh;">Option</h1>
+            <!-- Explication absance options -->
+            <div class="contenue" style="color: rgb(150, 150, 150);" style="padding: 0 10vw;">
+                Actuellement, le site ne propose <b>aucune option à modifier</b>. Cependant, si vous rencontrez un problème 
+                durant votre partie ou que vous souhaitez me contacter pour me faire part d'une quelconque information 
+                veuillez <b>me contacter via mon e-mail</b> se situant dans mon portfolio ! <b>Merci d'avance !</b>  
+            </div>
+            <!-- Bouton de fermeture -->
+            <div class="bouton">
+                <button type="button" id="fermeture">X</button>
+            </div>
+            
+        </div>
+        <!-- Bar de séparation -->
+        <div class="separation" style="width: 80vw; margin-left: 10vw; margin-top: 5vh;"></div>
+        <h2 class="contenue" style="font-size: 30px;"><b>Informations complémentaires</b></h2>
+        <!-- Informations complémentaires -->
+        <div class="contenue">
+            Vous démarrez le jeu en choisissant l'un des <b>trois pouvoirs disponibles</b> sur le second écran. 
+            Votre mission consiste à éliminer les ennemis en utilisant votre pouvoir pour <b>défendre votre base</b>, 
+            située au centre de l'écran. Vous disposez de 5 vies au début de chaque partie. À la fin de chaque manche, 
+            votre nombre de vies est rétabli à son niveau initial si vous en avez perdu. Toutes les 10 manches, 
+            vous serez confronté à <b>un boss redoutable</b>. À la suite de chaque combat contre un boss, 
+            vous aurez la possibilité de <b>choisir parmi trois améliorations</b>. Ces améliorations sont proposées 
+            de manière aléatoire et peuvent varier d'une partie à l'autre, ainsi que d'un pouvoir à l'autre
+        </div><br>
+        <div class="contenue">
+            En ce qui concerne les ennemis, il existe au total quatre types différents : Basique, Rapide, Résistant et Ultime.
+            <b>Les ennemis Basiques</b> ont un seul point de vie et font leur apparition dès la première manche. 
+            <b>Les ennemis Rapides et Résistants</b> font leur apparition respectivement aux manches 3 et 6. 
+            Ces deux types d'ennemis possèdent des améliorations liées au nombre de vies ou à leur vitesse. 
+            <b>Les ennemis Ultimes</b> sont une combinaison redoutable des caractéristiques des ennemis Rapides et Résistants, 
+            mais ils n'apparaissent qu'à partir de la manche 21.
+        </div>
+                <!-- Bar de séparation -->
+                <div class="separation" style="width: 10vw; margin-left: 45vw;"></div>
+        <!-- Footer -->
+        <div class="conteneur" style="width: auto; padding-left: 0;">
+
+            <!-- Portfolio -->
+            <div style="width: 20vw;" class="conteneur_img">     
+                <div><a href="http://bookportfoliots.mmi-lepuy.fr/"><img src="img/portfolio.png" alt="Portfolio"></a></div>
+                <div class="contenue">
+                    Visiter mon Portfolio !
+                </div>
+            </div>
+
+            <!-- Github -->
+            <div style="width: 20vw;" class="conteneur_img">     
+                <div><a href="https://github.com/Julthique"><img src="img/github.png" alt="github"></a></div>
+                <div class="contenue">
+                    Visiter mon GitHub !
+                </div>
+            </div>
+
+            <!-- Twitter -->
+            <div style="width: 20vw;" class="conteneur_img">     
+                <div><a href="https://twitter.com/Julthique"><img src="img/twitter.png" alt="Twitter"></a></div>
+                <div class="contenue">
+                    Visiter mon Twitter !
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+<!-- ---------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------- -->
+    <!-- Ecran des améliorations -->
+    <div id="amelioration">
+        <!-- Titre du jeu -->
+        <h1 id="Titre_jeu">Choisissez une Amélioration !</h1>
+        <!-- Bar de séparation -->
+        <div class="separation" style="width: 20vw; margin-left: 40vw;"></div>
+        <!-- Pouvoirs -->
+        <div class="conteneur" style="width: auto; padding-left: 0;">
+            <!-- Amélioration1 -->
+            <div style="width: 30vw;">     
+                <div id="amelioration1_img"></div>
+                <h3 id="amelioration1_nom">Nom de la première amélioration</h3>
+                <!-- Bar de séparation -->
+                <div class="separation" style="width: 7vw;"></div>
+                <div class="contenue" id="amelioration1_contenue">
+                    Description de la première amélioration
+                </div>
+                <!-- Bouton de Lancement -->
+                <div class="bouton">
+                    <button type="button" id="play amelioration1_button">Choisir</button>
+                </div>
+            </div>
+
+            <!-- Amélioration2 -->
+            <div style="width: 30vw;">     
+                <div id="amelioration2_img"></div>
+                <h3 id="amelioration2_nom">Nom de la deuxième amélioration</h3>
+                <!-- Bar de séparation -->
+                <div class="separation" style="width: 7vw;"></div>
+                <div class="contenue" id="amelioration2_contenue">
+                    Description de la deuxième amélioration
+                </div>
+                <!-- Bouton de Lancement -->
+                <div class="bouton">
+                    <button type="button" id="play amelioration2_button">Choisir</button>
+                </div>
+            </div>
+
+            <!-- Amélioration3 -->
+            <div style="width: 30vw;">     
+                <div id="amelioration3_img"></div>
+                <h3 id="amelioration3_nom">Nom de la troisième amélioration</h3>
+                <!-- Bar de séparation -->
+                <div class="separation" style="width: 7vw;"></div>
+                <div class="contenue" id="amelioration3_contenue">
+                    Description de la troisième amélioration
+                </div>
+                <!-- Bouton de Lancement -->
+                <div class="bouton">
+                    <button type="button" id="play amelioration3_button">Choisir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ---------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------- -->
+    <!-- Ecran de défaite -->
+    <div id="perdu">
+        <h1 id="Titre_jeu">Game Over</h1>
+        <!-- Bar de séparation -->
+        <div class="separation" style="width: 20vw; margin-left: 40vw;"></div>
+        <div class="contenue" id="score" style="font-size: 25px;"> Manche final : <b>4</b></div>
+        <!-- Bar de séparation -->
+        <div class="separation" style="width: 20vw; margin-left: 40vw;"></div>
+        <!-- Remerciment -->
+        <h1 id="Titre_jeu" style="margin-top: 10vw;">Merci d'avoir joué !</h1>
+        <!-- Bar de séparation -->
+        <div class="separation" style="width: 20vw; margin-left: 40vw; margin-top: 10vw;"></div>
+        <!-- Bouton de Lancement -->
+        <div class="bouton">
+            <button type="button" id="restart" onclick="window.location.href='starter.html'">Restart</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

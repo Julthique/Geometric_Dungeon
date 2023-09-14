@@ -1,0 +1,219 @@
+body{
+    background-color: #01322d;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* //////////////////// ECRAN TITRE ////////////////// */
+#Titre_jeu{
+    color: #fff;
+    font-family: "Inter";
+    font-size: 50px;
+    font-style: italic;
+    font-weight:100;
+    text-align: center;
+    margin-top:7vh;
+}
+
+.separation{
+    border: #fff solid 1px;
+    margin-top: 5vh;
+}
+
+.contenue {
+    display: block;
+    justify-content: center;
+    color: #fff;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 5vh;
+    padding:0% 20%;
+}
+
+.conteneur {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 5vh auto;
+    padding-left: 5vw;
+    width: 30vw;
+}
+
+.conteneur div h3{
+    color: #fff;
+    font-family: "Inter";
+    font-size: 20px;
+    font-style:italic;
+    font-weight:bold;
+    text-align: center;
+    margin-top: 5vh;
+    padding: 1vh 2vw;
+}
+.conteneur div{
+    text-align: center;
+}
+.conteneur div .separation{
+    margin: 5vh auto;
+}
+
+
+.conteneur img{
+    width: 40px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+button{
+    background-color: #ffffff00;
+    color: #ffffff;
+    font-family: "Inter";
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 5vh;
+    padding: 1vh 2vw;
+    cursor: pointer;
+    transition: 0.3s;
+    border: #fff solid 1px;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: #025E55;
+    color: #ffffff;
+}
+
+.bouton{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* //////////////////// CANVAS ////////////////// */
+#ultra_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#container:focus{ 
+    outline: none;
+}
+
+
+/* //////////////////// PAUSE ////////////////// */
+
+#pause{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.700);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#pause img {
+    width: 20vw;
+    height: auto;
+    opacity: 0.5;
+    filter: drop-shadow(0 0 0.75rem #03a6787d);
+}
+
+#pause button:hover{
+    background-color: #ffffff00;
+}
+
+#pause h1{
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    color: #fff;
+    font-family: "Inter";
+    font-size: 50px;
+    font-style: italic;
+    font-weight:100;
+    text-align: center;
+    margin-top: 1rem;
+    text-shadow: 0 0 0.75rem #03a6787d;
+}
+
+#pause_option{
+    position: absolute;  
+    top: 5vh;
+    left:85vw;
+    margin-top: 1rem;
+} 
+
+/* //////////////////// OPTION ////////////////// */
+
+#option{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.900);
+}
+
+#fermeture{
+    font-size: 50px;
+    transition: 0.3s;
+    border: #fff solid 0px;
+    margin-top: 5vh;
+    color: #ffffff;
+}
+
+#fermeture:hover{
+    color:#bbb;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.header_option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+.conteneur_img img{
+    width: 40px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+/* //////////////////// GAME OVER ////////////////// */
+
+#perdu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:#000000;
+    opacity: 0.7; 
+}
+
+/* //////////////////// AMELIORATION ////////////////// */
+
+#amelioration{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:#000000;
+    opacity: 0.7; 
+}
